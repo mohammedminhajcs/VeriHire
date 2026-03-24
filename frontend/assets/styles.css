@@ -1,0 +1,269 @@
+:root {
+  --bg: #f4efe6;
+  --panel: rgba(255, 252, 246, 0.88);
+  --ink: #1e2430;
+  --muted: #5b6470;
+  --accent: #d35d47;
+  --accent-dark: #a13a28;
+  --line: rgba(30, 36, 48, 0.08);
+  --success: #167c59;
+  --warning: #b66a10;
+  --shadow: 0 20px 60px rgba(41, 45, 57, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(211, 93, 71, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(35, 95, 123, 0.12), transparent 24%),
+    linear-gradient(135deg, #f2ebdf 0%, #efe7da 55%, #e8ddcf 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(30, 36, 48, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 36, 48, 0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.layout {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+.hero-layout,
+.split-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.report-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  animation: rise 0.6s ease both;
+}
+
+.panel:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--accent-dark);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5vw, 4.3rem);
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+.lede,
+.question-card,
+.sample-box p,
+.feedback-box,
+.status-text,
+.code-output,
+label,
+li,
+span,
+p {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.lede,
+.question-card {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.question-card,
+.sample-box,
+.feedback-box,
+.code-output {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.64);
+  padding: 18px;
+}
+
+.sample-box {
+  display: grid;
+  gap: 12px;
+}
+
+.sample-box > div,
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.compact-box {
+  margin-top: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid rgba(30, 36, 48, 0.12);
+  border-radius: 22px;
+  padding: 18px;
+  font-size: 1rem;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ink);
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+  margin-top: 16px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button {
+  background: var(--accent);
+  color: #fff8f3;
+}
+
+.secondary-button {
+  background: rgba(30, 36, 48, 0.08);
+  color: var(--ink);
+}
+
+.status-text {
+  min-height: 24px;
+  color: var(--muted);
+}
+
+.feedback-box {
+  min-height: 140px;
+}
+
+.hidden {
+  display: none;
+}
+
+.code-output {
+  min-height: 160px;
+  white-space: pre-wrap;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.score-grid article {
+  border-radius: 24px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid var(--line);
+}
+
+.score-grid strong {
+  display: block;
+  font-size: 2rem;
+  margin-top: 8px;
+}
+
+.report-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.feedback-list {
+  display: grid;
+  gap: 12px;
+}
+
+.feedback-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-layout,
+  .split-layout,
+  .report-body,
+  .score-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .layout {
+    width: min(100% - 20px, 1180px);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}

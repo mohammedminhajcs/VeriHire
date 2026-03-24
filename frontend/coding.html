@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Test</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="coding">
+  <main class="layout split-layout">
+    <section class="panel info-panel">
+      <p class="eyebrow">Coding Test</p>
+      <h1 id="coding-title">Coding Problem</h1>
+      <p id="coding-prompt" class="question-card"></p>
+      <div class="sample-box compact-box">
+        <h2>Requirements</h2>
+        <p>Define a function named <strong>solve</strong>. Unsafe imports, system access, and long-running code are blocked.</p>
+      </div>
+    </section>
+
+    <section class="panel form-panel">
+      <label for="code-input">Python Code</label>
+      <textarea id="code-input" rows="16">def solve(value):
+    return value[::-1]</textarea>
+      <button id="submit-code" class="primary-button">Run Code</button>
+      <button id="show-report" class="secondary-button hidden">View Final Report</button>
+      <pre id="code-result" class="code-output"></pre>
+    </section>
+  </main>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

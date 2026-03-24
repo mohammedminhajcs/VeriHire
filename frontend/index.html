@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Interviewer</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="index">
+  <main class="layout hero-layout">
+    <section class="panel hero-panel">
+      <p class="eyebrow">AI Interviewer + Skill Evaluator</p>
+      <h1>Resume-driven technical interview simulation</h1>
+      <p class="lede">Paste a candidate resume, generate adaptive questions, continue to coding, and finish with a scored hiring report.</p>
+      <div class="sample-box">
+        <div>
+          <h2>Sample Resume</h2>
+          <button id="load-sample" class="secondary-button">Load sample</button>
+        </div>
+        <p id="sample-preview">Loading sample resume...</p>
+      </div>
+    </section>
+
+    <section class="panel form-panel">
+      <label for="resume-text">Resume Text</label>
+      <textarea id="resume-text" rows="16" placeholder="Paste resume text here"></textarea>
+      <label for="resume-pdf">Or Upload Resume PDF</label>
+      <input id="resume-pdf" type="file" accept="application/pdf,.pdf">
+      <button id="start-interview" class="primary-button">Start Interview</button>
+      <p id="status" class="status-text"></p>
+    </section>
+  </main>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

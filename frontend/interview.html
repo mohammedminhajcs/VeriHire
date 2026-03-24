@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Session</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="interview">
+  <main class="layout split-layout">
+    <section class="panel info-panel">
+      <p class="eyebrow">Interview Session</p>
+      <h1 id="question-heading">Question 1</h1>
+      <p id="question-text" class="question-card"></p>
+      <div class="meta-row">
+        <span id="question-count"></span>
+        <span id="difficulty-level"></span>
+      </div>
+      <div id="latest-feedback" class="feedback-box"></div>
+    </section>
+
+    <section class="panel form-panel">
+      <label for="answer-text">Your Answer</label>
+      <textarea id="answer-text" rows="14" placeholder="Answer the current interview question"></textarea>
+      <button id="submit-answer" class="primary-button">Submit Answer</button>
+      <button id="go-coding" class="secondary-button hidden">Continue to Coding Test</button>
+      <p id="interview-status" class="status-text"></p>
+    </section>
+  </main>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

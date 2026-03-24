@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Report</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body data-page="report">
+  <main class="layout report-layout">
+    <section class="panel report-hero">
+      <p class="eyebrow">Final Evaluation</p>
+      <h1 id="recommendation-text">Loading report...</h1>
+      <div class="score-grid">
+        <article>
+          <span>Overall</span>
+          <strong id="overall-score"></strong>
+        </article>
+        <article>
+          <span>Interview</span>
+          <strong id="interview-score"></strong>
+        </article>
+        <article>
+          <span>Coding</span>
+          <strong id="coding-score"></strong>
+        </article>
+        <article>
+          <span>Behavior</span>
+          <strong id="behavior-score"></strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel report-body">
+      <div>
+        <h2>Strengths</h2>
+        <ul id="strengths-list"></ul>
+      </div>
+      <div>
+        <h2>Weaknesses</h2>
+        <ul id="weaknesses-list"></ul>
+      </div>
+      <div>
+        <h2>Skills</h2>
+        <ul id="skills-list"></ul>
+      </div>
+      <div>
+        <h2>Behavior Flags</h2>
+        <ul id="flags-list"></ul>
+      </div>
+      <div>
+        <h2>Resume Source</h2>
+        <ul id="resume-source-list"></ul>
+      </div>
+      <div>
+        <h2>Behavior Breakdown</h2>
+        <ul id="behavior-breakdown-list"></ul>
+      </div>
+      <div>
+        <h2>Interview Feedback</h2>
+        <div id="feedback-list" class="feedback-list"></div>
+      </div>
+    </section>
+  </main>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
